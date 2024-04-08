@@ -1,0 +1,72 @@
+table {
+  margin-top: 20px;
+}
+
+.form {
+  padding: 20px;
+  background-color: #7FB5B5;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn__form {
+  color: white;
+  background-color: #7f7fb5;
+  border-color: #7f7fb5;
+}
+
+.btn__form:hover {
+  color: white;
+  background-color: #9999cc;
+  border-color: #9999cc;
+}
+
+.btn__form:active,
+.btn__form:focus {
+  color: white;
+  background-color: #2f3b5d;
+  border-color: #2f3b5d;
+}
+
+.table__wrap {
+  padding: 0;
+}
+
+.button__delete {
+  cursor: pointer;
+}
+
+th:not(:last-child) {
+  cursor: pointer;
+}
+
+.form__filter_inputs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn__wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.form__input {
+  --offsets: 1;
+  --gap: 15px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+}
+
+ul {
+  list-style: none;
+}
+
+.search__result {
+  margin-bottom: 20px;
+}
+
+.descr {
+  padding-bottom: 0;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список студентов</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <!-- Этап 1. Создайте верстку элементов, которые будут статичны (неизменны).  -->
+  <div class="container form">
+    <h2 class="subtitle">Введите параметры для поиска</h2>
+    <form class="form__filter">
+      <div class="form__filter_inputs">
+        <input id="fio" type="text" class="form-control form__input" placeholder="Ф.И.О.">
+        <input id="faculty" type="text" class="form-control form__input" placeholder="Факультет">
+        <input id="startYear" type="number" class="form-control form__input" placeholder="Год начала обучения">
+        <input id="finishYear" type="number" class="form-control form__input" placeholder="Год окончания обучения">
+      </div>
+      <div class="btn__wrap">
+        <button class="btn btn__form" type="submit">Фильтровать</button>
+        <button class="btn btn__form" type="reset">Сброс</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container table__wrap"></div>
+
+  <div class="container form">
+    <h2 class="subtitle">Введите ваши данные</h2>
+    <form id="form">
+      <div class="form-group">
+        <label for="first_name">Имя:</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+      </div>
+
+      <div class="form-group">
+        <label for="last_name">Фамилия:</label>
+        <input type="text" class="form-control" id="last_name" name="last_name">
+      </div>
+
+      <div class="form-group">
+        <label for="patronymic_date">Отчество:</label>
+        <input type="text" class="form-control" id="patronymic_date" name="patronymic">
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">Дата рождения:</label>
+        <input type="date" class="form-control" id="birthdate" name="birthdate">
+      </div>
+
+      <div class="form-group">
+        <label for="start_year">Год начала обучения:</label>
+        <input type="number" class="form-control" id="start_year" name="start_year">
+      </div>
+
+      <div class="form-group">
+        <label for="faculty">Факультет:</label>
+        <input type="text" class="form-control" id="faculty_date" name="faculty">
+      </div>
+
+      <div class="descr"></div>
+
+      <button class="btn btn__form" id="submitButton">Добавить студента</button>
+    </form>
+  </div>
+
+  <!-- <script>
+    // Получаем текущий год
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth() + 1;
+    const currentDay = new Date().getDate();
+    const formatedCurrentMonth = currentMonth < 10 ? '0' + currentMonth : currentMonth;
+    const formatedCurrentDay = currentDay < 10 ? '0' + currentDay : currentDay;
+    // Находим элемент input с id="start_year"
+    const startYearInput = document.getElementById('start_year');
+    // Устанавливаем максимальное значение атрибута max для этого элемента
+    startYearInput.setAttribute('max', currentYear);
+
+    const birthDateInput = document.getElementById('birthdate');
+    const currentDate = `${currentYear}-${formatedCurrentMonth}-${formatedCurrentDay}`
+    birthDateInput.setAttribute('max', currentDate);
+  </script> -->
+</body>
+
+</html>
